@@ -13,6 +13,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { TicketsComponent } from './tickets/tickets.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { FlightdetailsComponent } from './flightdetails/flightdetails.component';
+import { CreateFlightComponent } from './create-flight/create-flight.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FlightdetailsComponent } from './flightdetails/flightdetails.component'
     OrdersComponent,
     TicketsComponent,
     FavoritesComponent,
-    FlightdetailsComponent
+    FlightdetailsComponent,
+    CreateFlightComponent
   ],
   imports: [
     BrowserModule,

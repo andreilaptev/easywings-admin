@@ -1,7 +1,21 @@
 <div class="container">
     <div class="flights_content" >
         <div style="text-align: center">
-        <h1 > Here is the list of all flights available </h1>   
+       
+      <div class="service"> 
+          <h3> FLIGHTS MAINTENANCE PAGE</h3>
+        <div class="newFlightButton">
+         <a routerLink="/create_flight"><button> Create New Flight  </button></a>   
+        
+        </div>
+      
+        <div class="searchField">
+          <h5> Type to search for the flight</h5>
+          <input type="text" name="search" [(ngModel)]="flightSearch">
+        </div> 
+
+      </div>
+
     </div><br>
 
     <ul>         

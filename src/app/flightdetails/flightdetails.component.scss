@@ -1,0 +1,16 @@
+.container {
+    display: grid;
+    //grid-template-columns: 15% auto;
+    grid-template-columns: auto;
+    background: #e4d9c5;
+   
+}
+
+ul {
+    list-style-type: none;
+}
+.details{
+    color: blue;
+    font-size: 20px;
+    margin-left: 50px;
+}

@@ -7,6 +7,7 @@ import { TicketsComponent } from 'src/app/tickets/tickets.component';
 import { FavoritesComponent } from 'src/app/favorites/favorites.component';
 import { CustomersComponent } from 'src/app/customers/customers.component';
 import { FlightdetailsComponent } from 'src/app/flightdetails/flightdetails.component';
+import { CreateFlightComponent } from 'src/app/create-flight/create-flight.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'flight_details/:id',
     component: FlightdetailsComponent
+  },
+  {
+    path: 'create_flight',
+    component: CreateFlightComponent
   }
 ];
 

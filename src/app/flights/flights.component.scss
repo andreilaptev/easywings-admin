@@ -88,3 +88,28 @@ button {
    color: red; 
 }
 
+.service{
+    margin-top: 20px;
+}
+
+.newFlightButton button{
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    float: left;
+    font-weight: 600;
+    margin-left: 40px;
+    background: 	#ffc4a9;
+    width: 190px;
+    height: 40px;
+}
+
+.searchField{
+    transform: translateX(340px);    
+}
+.searchField input{
+    height: 30px;
+    width: 200px;
+    border-radius: 3px;
+}

@@ -1,10 +1,14 @@
-<h2>{{ flight$.flightName }}</h2>
+<div class="container">
 
-<ul>
-  <li>{{ flight$.departureCity }}</li>
-        <li>{{ flight$.arrivalCity }}</li>
-        <li>{{ flight$.departureTime }}</li>
-        <li>{{ flight$.arrivalTime }}</li>
-        <li>{{ flight$.direct }}</li>
-        <li>{{ flight$.ticketPrice }}</li>
-</ul>
+    <h2> Flight Number: <span>{{ flight$.flightName }} </span></h2>
+
+    <ul>
+      <li> Departure City: <span class="details"> {{ flight$.departureCity }} </span></li>
+      <li> Arrival City: <span class="details">{{ flight$.arrivalCity }}</span></li>
+      <li> Departure Date:  <span class="details">{{ flight$.departureTime | date }}</span></li>
+      <li> Arrival Date: <span class="details">{{ flight$.arrivalTime | date}}</span></li>
+      <li> Direct: <span class="details">{{ flight$.direct }}</span></li>
+      <li> Price: <span class="details"> {{ flight$.ticketPrice | currency}}</span></li>
+    </ul>
+
+</div>
