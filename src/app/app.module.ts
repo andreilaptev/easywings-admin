@@ -12,6 +12,7 @@ import { CustomersComponent } from './customers/customers.component';
 import { OrdersComponent } from './orders/orders.component';
 import { TicketsComponent } from './tickets/tickets.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { FlightdetailsComponent } from './flightdetails/flightdetails.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
     CustomersComponent,
     OrdersComponent,
     TicketsComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    FlightdetailsComponent
   ],
   imports: [
     BrowserModule,
