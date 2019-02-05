@@ -1,3 +1,50 @@
-<p>
-  flights works!
-</p>
+<div class="container">
+    <div class="flights_content" >
+        <div style="text-align: center">
+        <h1 > Here is the list of all flights available </h1>   
+    </div><br>
+
+    <ul>         
+        <!--<li  *ngFor="let flight of filteredFlights"> -->
+            <li  *ngFor="let flight of flights$">  
+            
+            <div > 
+                <a routerLink="/details/{{flight.id}}">                
+                <h3 class="flight_name">  Flight number : {{ flight.flightName }}</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th> Departure City </th>
+                                <th> Arrival City</th>
+                                <th> Departure Time </th>
+                                <th> Arrival Time </th>
+                                <th> Direct </th>
+                                <th> Price </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ flight.departureCity }}</td> <!-- | enter: departureCityField : i-->
+                                <td> {{ flight.arrivalCity }}</td>
+                                <td> {{ flight.departureTime }} </td>
+                                <td> {{ flight.arrivalTime }}</td>
+                                <td>
+                                   <div style="color:green" *ngIf="flight.direct;else unset"> Yes</div> 
+                                   <ng-template #unset>No </ng-template>
+                                </td>
+                                <td> {{ flight.ticketPrice }} </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </a>
+             </div>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+</div>>
