@@ -1,0 +1,27 @@
+.container {
+    background: #e4d9c5;
+    display: grid;
+    grid-auto-columns: auto;
+    text-align: center;
+}
+
+.container .item{
+   border: 1px solid darkblue;
+   border-radius: 5px;
+   background: 	#32bfff;
+   width: 60%;
+   height: 50px;
+   margin: 20px 0;
+   line-height: 50px;
+   transform: translateX(30%);
+   font-weight: bold;
+}
+
+.container a{
+    text-decoration: none;
+}
+
+.container .item:hover {
+    background: rgb(247, 247, 188);
+    color: #fff;
+}
