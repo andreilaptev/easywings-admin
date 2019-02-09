@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { Observable } from 'rxjs';
+import { Data } from '@angular/router/src/config';
 
 @Component({
   selector: 'app-customers',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomersComponent implements OnInit {
 
-  constructor() { }
+customers$; any;
+customer: any;
+
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+
+    this.data.getAllCustomers().subscribe(
+      data => {
+        this.customers$ = data;
+        console.log(this.customers$);        
+      })  
   }
 
 }

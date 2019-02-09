@@ -1,3 +1,55 @@
-<p>
-  customers works!
-</p>
+<div class="container">
+  <div class="flights_content" >
+      <div style="text-align: center">
+     
+    <div class="service"> 
+        <h3> CUSTOMERS MAINTENANCE PAGE</h3>
+     <!-- <div class="newFlightButton">
+       <a routerLink="/create_flight"><button> Create New Flight  </button></a>   
+      
+      </div>-->
+    
+      <div class="searchField">
+        <h5> Type to search for the customer</h5>
+        <input type="text" name="search" [(ngModel)]="customerSearch">
+      </div> 
+
+    </div>
+
+  </div><br>
+
+  <ul>         
+      <!--<li  *ngFor="let flight of filteredFlights"> -->
+          <li  *ngFor="let customer of customers$">  
+          
+          <div > 
+              <a><!--</a> routerLink="/flight_details/{{flight.id}}"> -->               
+              <!--<h3 class="flight_name">  Flight number : {{ flight.flightName }}</h3>-->
+
+                  <table>
+                      <thead>
+                          <tr>
+                              <th> Customer's Full Name </th>
+                              <th> Customer's E-mail </th>
+                              
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>{{ customer.fullName }}</td> <!-- | enter: departureCityField : i-->
+                              <td> {{ customer.email }}</td>
+            
+                          </tr>
+                      </tbody>
+                  </table>
+              </a>
+           </div>
+      </li>
+      
+  </ul>
+</div>
+
+
+
+
+</div>>
