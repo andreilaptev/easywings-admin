@@ -29,7 +29,26 @@ export class DataService {
                   ticketPrice: flight.price
                 };
        return this.http.post('http://laptevphamproject-prod.us-east-1.elasticbeanstalk.com/api/Flights', body); 
-       //return this.http.post('https://localhost:44310/api/flights', body); 
+       
+
+  }
+
+  updateFlight(flightId, flight) {
+
+    const body = {
+      
+      ID: flightId,
+      flightName: flight.flightNumber, 
+      departureCity: flight.departureCity, 
+      arrivalCity: flight.arrivalCity, 
+      departureTime: flight.departureDate, 
+      arrivalTime: flight.arrivalDate, 
+      direct: flight.isDirect, 
+      ticketPrice: flight.price
+    };
+
+    //return this.http.put('http://laptevphamproject-prod.us-east-1.elasticbeanstalk.com/api/flights/' + flightId, flight); 
+    return this.http.put('https://localhost:44310/api/flights/' + flightId, body); 
 
   }
 

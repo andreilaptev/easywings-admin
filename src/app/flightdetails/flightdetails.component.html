@@ -12,3 +12,63 @@
     </ul>
 
 </div>
+
+<div class="buttons-container">
+
+  <div class="edit">
+
+    <button (click)=editRequest()> Edit Flight </button>
+    
+  </div>
+
+  <div class="delete">
+    <button (click)=deleteFlight(flightId)> Delete Flight </button> 
+  </div> 
+  
+  <div class="back">
+   <a routerLink="/flights"><button> BACK </button></a>  
+  </div>
+
+</div>
+
+<!-- EDITING SECTION-->
+
+<div class="edit-container" *ngIf="toEdit">
+  <h2> Edit Flight Form</h2>
+
+
+  Flight Number : 
+  <input type="text" name="flightNumber"  [(ngModel)]="updatedFlight.flightNumber">
+
+  <br>
+  Departure City :
+  <input type="text" name="departureCityField" placeholder="fff" [(ngModel)]="updatedFlight.departureCity">
+  <br>
+
+  Arrival City :
+  <input type="text" name="arrivalCityField" [(ngModel)]="updatedFlight.arrivalCity">
+  <br>
+
+  Departure Date :
+  <input type="date" name="departureDate" [(ngModel)]="updatedFlight.departureDate">
+  <br>
+
+  Arrival Date :
+  <input type="date" name="arrivalDate" [(ngModel)]="updatedFlight.arrivalDate">
+  <br>
+
+  Is Direct :
+  <input type="checkbox" name="isDirect" [(ngModel)]="updatedFlight.isDirect">
+  <br>
+
+  Price :
+  <input type="number" name="price" [(ngModel)]="updatedFlight.price">
+  <br>
+<br>
+
+  <button (click)=editFlight(updatedFlight)> EDIT </button>
+  <br>
+  
+  <button (click)=editRequest()> CLOSE </button> 
+
+</div>
