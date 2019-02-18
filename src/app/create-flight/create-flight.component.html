@@ -1,6 +1,8 @@
 <div class="container">
   <h2> New Flight Form</h2>
 
+  <h3 *ngIf="warning"> All Fields Are Mandatory !! </h3>
+
   Flight Number : 
   <input type="text" name="flightNumber" [(ngModel)]="newFlight.flightNumber">
 
@@ -21,7 +23,7 @@
   <input type="date" name="arrivalDate" [(ngModel)]="newFlight.arrivalDate">
   <br>
 
-  IS Direct :
+  Is Direct :
   <input type="checkbox" name="isDirect" [(ngModel)]="newFlight.isDirect">
   <br>
 
@@ -31,13 +33,15 @@
 <br>
 
   <button (click)=addFlight(newFlight)> Add Flight </button>
+  <br>
+  
+  <a routerLink="/flights"><button> BACK </button></a>  
 
 </div>
 
 <div class="addedWindow" *ngIf="added">
 
   <h3> Flight Added !</h3>
-
-  <a routerLink="/flights"><button> OK </button></a>   
+  <a routerLink="/flights"><button> OK </button></a>      
 
 </div>

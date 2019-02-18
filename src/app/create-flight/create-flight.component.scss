@@ -1,3 +1,16 @@
+.container {
+    margin-left: 50px;
+}
+
+.container h3 {
+    color: red;
+    
+}
+
+.container input {
+    margin-top: 20px;
+}
+
 .addedWindow {
 position: fixed;
 border: 1px solid black;
@@ -16,7 +29,8 @@ text-align: center;
 
 }
 
-.addedWindow button {
+button {
 height: 30px;
 width: 150px;
+margin-top: 10px;
 }

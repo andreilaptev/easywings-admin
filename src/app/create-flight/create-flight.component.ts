@@ -26,6 +26,8 @@ export class CreateFlightComponent implements OnInit {
 
   receivedFlight: Flight;
 
+  warning: boolean = false;
+
   constructor(private data: DataService) { }
 
   ngOnInit() {
@@ -35,15 +37,22 @@ export class CreateFlightComponent implements OnInit {
 
     //debugger;
 
-    /*
-    this.data.addFlight(newflight) 
-      .subscribe(
-        (data: Flight) => {this.receivedFlight=data; 
-         // this.done=true;
-        },
-          error => console.log(error)        
-      );*/
-      this.added = true;
+    if (newflight.flightName || newflight.departureCity || newflight.arrivalCity || newflight.departureTime || newflight.arrivalTime 
+      || newflight.ticketPrice == null || newflight.flightName || newflight.departureCity || newflight.arrivalCity || newflight.departureTime || newflight.arrivalTime 
+      || newflight.ticketPrice == undefined) {
+
+        this.warning = true;
+      }else {
+
+      this.data.addFlight(newflight) 
+        .subscribe(
+          (data: Flight) => {this.receivedFlight=data; 
+          // this.done=true;
+          },
+            error => console.log(error)        
+        );
+        this.added = true;
+    }
   }
 
 }
