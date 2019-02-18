@@ -39,7 +39,7 @@ toEdit: boolean = false;
     editFlight() {
 
       console.log(this.flightId);
-      debugger;
+      //debugger;
 
       this.data.updateFlight(this.flightId, this.updatedFlight)
         .subscribe(
@@ -51,6 +51,10 @@ toEdit: boolean = false;
     deleteFlight(flightId) {
 
       debugger;
+      this.data.deleteFlight(this.flightId)
+      .subscribe(
+        data => this.flight$ = data
+      )
     }
 
 }

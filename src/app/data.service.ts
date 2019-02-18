@@ -52,6 +52,11 @@ export class DataService {
 
   }
 
+  deleteFlight(flightId) {
+
+    return this.http.delete('http://laptevphamproject-prod.us-east-1.elasticbeanstalk.com/api/flights/' + flightId);
+  }
+
   getAllCustomers() {
     return this.http.get('http://laptevphamproject-prod.us-east-1.elasticbeanstalk.com/api/customers');
   }
