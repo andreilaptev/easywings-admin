@@ -47,8 +47,8 @@ export class DataService {
       ticketPrice: flight.price
     };
 
-    //return this.http.put('http://laptevphamproject-prod.us-east-1.elasticbeanstalk.com/api/flights/' + flightId, flight); 
-    return this.http.put('https://localhost:44310/api/flights/' + flightId, body); 
+    return this.http.put('http://laptevphamproject-prod.us-east-1.elasticbeanstalk.com/api/flights/' + flightId, body); 
+    //return this.http.put('https://localhost:44310/api/flights/' + flightId, body); 
 
   }
 
