@@ -38,31 +38,31 @@
 
 
   Flight Number : 
-  <input type="text" name="flightNumber"  [(ngModel)]="updatedFlight.flightNumber">
+  <input class="field" type="text" name="flightNumber" placeholder="{{ flight$.flightName }}"  [(ngModel)]="updatedFlight.flightNumber">
 
   <br>
   Departure City :
-  <input type="text" name="departureCityField" placeholder="fff" [(ngModel)]="updatedFlight.departureCity">
+  <input class="field" type="text" name="departureCityField" placeholder="{{ flight$.departureCity }}" [(ngModel)]="updatedFlight.departureCity">
   <br>
 
   Arrival City :
-  <input type="text" name="arrivalCityField" [(ngModel)]="updatedFlight.arrivalCity">
+  <input class="field" type="text" name="arrivalCityField" placeholder="{{ flight$.arrivalCity }}" [(ngModel)]="updatedFlight.arrivalCity">
   <br>
 
   Departure Date :
-  <input type="date" name="departureDate" [(ngModel)]="updatedFlight.departureDate">
+  <input class="field" type="date" name="departureDate" placeholder="{{ flight$.departureTime }}" [(ngModel)]="updatedFlight.departureDate">
   <br>
 
   Arrival Date :
-  <input type="date" name="arrivalDate" [(ngModel)]="updatedFlight.arrivalDate">
+  <input class="field" type="date" name="arrivalDate" placeholder="{{ flight$.arrivalTime }}" [(ngModel)]="updatedFlight.arrivalDate">
   <br>
 
   Is Direct :
-  <input type="checkbox" name="isDirect" [(ngModel)]="updatedFlight.isDirect">
+  <input class="field" type="checkbox" name="isDirect" [(ngModel)]="updatedFlight.isDirect">
   <br>
 
   Price :
-  <input type="number" name="price" [(ngModel)]="updatedFlight.price">
+  <input class="field" type="number" name="price" placeholder="{{ flight$.ticketPrice }}" [(ngModel)]="updatedFlight.ticketPrice">
   <br>
 <br>
 
