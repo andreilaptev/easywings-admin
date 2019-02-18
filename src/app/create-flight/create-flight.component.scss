@@ -1,0 +1,22 @@
+.addedWindow {
+position: fixed;
+border: 1px solid black;
+height: 200px;
+width: 300px;
+background: white;
+border-radius: 8px;
+margin: 5% 30%;
+text-align: center;
+}
+
+.addedWindow h3 {
+    color: green;
+    //transform: translateX(28%);
+    padding-top: 15%;
+
+}
+
+.addedWindow button {
+height: 30px;
+width: 150px;
+}

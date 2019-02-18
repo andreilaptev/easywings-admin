@@ -1,3 +1,43 @@
-<p>
-  create-flight works!
-</p>
+<div class="container">
+  <h2> New Flight Form</h2>
+
+  Flight Number : 
+  <input type="text" name="flightNumber" [(ngModel)]="newFlight.flightNumber">
+
+  <br>
+  Departure City :
+  <input type="text" name="departureCityField" [(ngModel)]="newFlight.departureCity">
+  <br>
+
+  Arrival City :
+  <input type="text" name="arrivalCityField" [(ngModel)]="newFlight.arrivalCity">
+  <br>
+
+  Departure Date :
+  <input type="date" name="departureDate" [(ngModel)]="newFlight.departureDate">
+  <br>
+
+  Arrival Date :
+  <input type="date" name="arrivalDate" [(ngModel)]="newFlight.arrivalDate">
+  <br>
+
+  IS Direct :
+  <input type="checkbox" name="isDirect" [(ngModel)]="newFlight.isDirect">
+  <br>
+
+  Price :
+  <input type="number" name="price" [(ngModel)]="newFlight.price">
+  <br>
+<br>
+
+  <button (click)=addFlight(newFlight)> Add Flight </button>
+
+</div>
+
+<div class="addedWindow" *ngIf="added">
+
+  <h3> Flight Added !</h3>
+
+  <a routerLink="/flights"><button> OK </button></a>   
+
+</div>
