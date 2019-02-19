@@ -37,8 +37,8 @@ export class CreateFlightComponent implements OnInit {
 
     //debugger;
 
-    if (newflight.flightName || newflight.departureCity || newflight.arrivalCity || newflight.departureTime || newflight.arrivalTime 
-      || newflight.ticketPrice == null || newflight.flightName || newflight.departureCity || newflight.arrivalCity || newflight.departureTime || newflight.arrivalTime 
+    if (newflight.flightName == undefined || newflight.departureCity== undefined || newflight.arrivalCity == undefined
+      || newflight.departureTime == undefined|| newflight.arrivalTime == undefined
       || newflight.ticketPrice == undefined) {
 
         this.warning = true;

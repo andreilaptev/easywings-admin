@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { ActivatedRoute } from "@angular/router";
 import { concat } from 'rxjs/internal/observable/concat';
 import { Flight } from '../flight';
+import { debug } from 'util';
 
 @Component({
   selector: 'app-flightdetails',
@@ -19,6 +20,10 @@ updatedFlight : Flight = new Flight();
 receivedFlight: any;
 
 toEdit: boolean = false;
+editConfirm: boolean = false;
+deleteConfirm: boolean = false;
+updated: boolean= false;
+deleted: boolean= false;
 
   constructor(private route: ActivatedRoute, private data : DataService) {
     this.route.params.subscribe( params => this.flightId = params.id );
@@ -30,12 +35,23 @@ toEdit: boolean = false;
       data => this.flight$ = data         
     )};
 
+    ///////////////// EDITING //////////////
+    // Show Edit Form
     editRequest(flightId) {
       this.toEdit = ! this.toEdit;
-
-
     }
 
+    // Show Edit Confirmation Window
+    confirmEdit(){
+       this.editConfirm = true;
+     }
+
+     // Cancel Update Function
+     cancelUpdate() {
+      this.editConfirm = false;
+     }
+
+    // Edit Flight Function
     editFlight() {
 
       console.log(this.flightId);
@@ -43,11 +59,28 @@ toEdit: boolean = false;
 
       this.data.updateFlight(this.flightId, this.updatedFlight)
         .subscribe(
-          data => this.flight$ = data
+          data => this.flight$ = data          
         )
-
+        this.editConfirm = false;
+        this.updated = true;
+        location.reload();
     }
 
+  
+    /////// DELETION ///////////////
+
+    // Confirm Deletion Window
+    confirmDelete() {
+      this.deleteConfirm = true;
+    }
+
+    // Cancel Delete
+    cancelDelete() {
+      this.deleteConfirm = false;
+    }
+
+
+    // Delete Flight function
     deleteFlight(flightId) {
 
       debugger;
@@ -55,6 +88,9 @@ toEdit: boolean = false;
       .subscribe(
         data => this.flight$ = data
       )
+      this.deleteConfirm = false;
+      this.deleted = true;
+      
     }
 
 }

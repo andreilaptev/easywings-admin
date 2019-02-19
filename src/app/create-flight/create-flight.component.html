@@ -4,7 +4,7 @@
   <h3 *ngIf="warning"> All Fields Are Mandatory !! </h3>
 
   Flight Number : 
-  <input type="text" name="flightNumber" [(ngModel)]="newFlight.flightNumber">
+  <input type="text" name="flightNumber" [(ngModel)]="newFlight.flightName">
 
   <br>
   Departure City :
@@ -16,11 +16,11 @@
   <br>
 
   Departure Date :
-  <input type="date" name="departureDate" [(ngModel)]="newFlight.departureDate">
+  <input type="date" name="departureDate" [(ngModel)]="newFlight.departureTime">
   <br>
 
   Arrival Date :
-  <input type="date" name="arrivalDate" [(ngModel)]="newFlight.arrivalDate">
+  <input type="date" name="arrivalDate" [(ngModel)]="newFlight.arrivalTime">
   <br>
 
   Is Direct :
@@ -28,7 +28,7 @@
   <br>
 
   Price :
-  <input type="number" name="price" [(ngModel)]="newFlight.price">
+  <input type="number" name="price" [(ngModel)]="newFlight.ticketPrice">
   <br>
 <br>
 

@@ -22,7 +22,7 @@
   </div>
 
   <div class="delete">
-    <button (click)=deleteFlight(flightId)> Delete Flight </button> 
+    <button (click)=confirmDelete()> Delete Flight </button> 
   </div> 
   
   <div class="back">
@@ -32,7 +32,7 @@
 </div>
 
 <!-- EDITING SECTION-->
-
+<!--  EDIT FORM-->
 <div class="edit-container" *ngIf="toEdit">
   <h2> Edit Flight Form</h2>
 
@@ -62,13 +62,42 @@
   <br>
 
   Price :
-  <input class="field" type="number" name="price" placeholder="{{ flight$.ticketPrice }}" [(ngModel)]="updatedFlight.ticketPrice">
+  <input class="field" type="number" name="price" placeholder="{{ flight$.ticketPrice }}" [(ngModel)]="updatedFlight.price">
   <br>
 <br>
 
-  <button (click)=editFlight(updatedFlight)> EDIT </button>
+  <button (click)=confirmEdit()> EDIT </button>
   <br>
   
   <button (click)=editRequest()> CLOSE </button> 
 
+</div>
+
+<!--Edit Confirmation Window-->
+<div class="confirmWindow" *ngIf="editConfirm">
+  <h3> Confirm Flight Update? </h3>
+  <button style="float: left" (click)=editFlight(updatedFlight)> CONFIRM </button> 
+  <button (click)=cancelUpdate()> CANCEL </button>
+</div>
+
+
+<!-- EDIT RESULT WINDOW-->
+<div class="updatedWindow" *ngIf="updated">
+  <h3> Flight Updated !</h3>
+  <a routerLink=""><button> OK </button></a>   
+</div>
+
+<!--DELETE Confirmation Window-->
+<div class="confirmDeleteWindow" *ngIf="deleteConfirm">
+  <h3 style="color: red"> Confirm Flight Delete? </h3>
+  <button style="float: left; background:red; color:white;" (click)=deleteFlight(flightId)> CONFIRM </button> 
+  <button style=" background:white; color:green" (click)=cancelDelete()> CANCEL </button>
+</div>
+
+
+<!-- DELETING SECTION-->
+<!-- DELETE RESULT WINDOW-->
+<div class="updatedWindow" *ngIf="deleted">
+  <h3> Flight Deleted !</h3>
+  <a routerLink="/flights"><button> OK </button></a>   
 </div>

@@ -20,13 +20,13 @@ export class DataService {
 
   addFlight(flight){    
 
-    const body = {flightName: flight.flightNumber, 
+    const body = {flightName: flight.flightName, 
                   departureCity: flight.departureCity, 
                   arrivalCity: flight.arrivalCity, 
-                  departureTime: flight.departureDate, 
-                  arrivalTime: flight.arrivalDate, 
+                  departureTime: flight.departureTime, 
+                  arrivalTime: flight.arrivalTime, 
                   direct: flight.isDirect, 
-                  ticketPrice: flight.price
+                  ticketPrice: flight.ticketPrice
                 };
        return this.http.post('http://laptevphamproject-prod.us-east-1.elasticbeanstalk.com/api/Flights', body); 
        

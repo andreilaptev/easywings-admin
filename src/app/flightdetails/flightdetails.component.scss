@@ -30,3 +30,34 @@ button {
     width: 200px;
     margin-bottom: 20px;
 }
+
+.confirmWindow {
+    position: absolute;
+    border: 1px solid black;
+    height: 200px;
+    width: 500px;
+    background: white;
+    border-radius: 8px;
+    margin: -500px 30%;
+    text-align: center;
+   
+    }
+    .confirmWindow h3, confirmDeleteWindow h3  {
+        margin-top: 50px;
+    }
+
+    .confirmWindow button, .confirmDeleteWindow button {
+        margin-left: 50px;
+    }
+
+    .confirmDeleteWindow {
+        position: absolute;
+        border: 1px solid black;
+        height: 200px;
+        width: 500px;
+        background: white;
+        border-radius: 8px;
+        margin: 0 30%;
+        text-align: center;
+       
+    }
