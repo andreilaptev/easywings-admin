@@ -1,3 +1,56 @@
-<p>
-  orders works!
-</p>
+<div class="container">
+  <div class="flights_content" >
+      <div style="text-align: center">
+     
+    <div class="service"> 
+        <h3> ORDERS MAINTENANCE PAGE</h3>
+      
+    
+      <div class="searchField">
+        <h5> Type to search for the order</h5>
+        <input type="text" name="search" [(ngModel)]="flightSearch">
+      </div> 
+
+    </div>
+
+  </div><br>
+
+  <ul>         
+      <!--<li  *ngFor="let flight of filteredFlights"> -->
+          <li  *ngFor="let order of orders$">  
+          
+          <div > 
+              <a routerLink="/order_details/{{order.id}}">               
+              <!--<h3 class="flight_name">  Flight number : {{ flight.flightName }}</h3>-->
+
+                  <table>
+                      <thead>
+                          <tr>
+                              <th> Order ID  </th>
+                              <th> Order Number </th>
+                              <th> Total Amount </th>
+                              <th> Date  </th>
+                              <th> Customer ID </th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>{{ order.orderId }}</td> <!-- | enter: departureCityField : i-->
+                              <td> {{ order.orderNumber }}</td>
+                              <td> {{ order.totalSum }} </td>
+                              <td> {{ order.date }}</td>
+                              <td> {{ order.customerId }}</td>                              
+                          </tr>
+                      </tbody>
+                  </table>
+              </a>
+           </div>
+      </li>
+      
+  </ul>
+</div>
+
+
+
+
+</div>

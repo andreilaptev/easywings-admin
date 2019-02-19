@@ -8,6 +8,7 @@ import { FavoritesComponent } from 'src/app/favorites/favorites.component';
 import { CustomersComponent } from 'src/app/customers/customers.component';
 import { FlightdetailsComponent } from 'src/app/flightdetails/flightdetails.component';
 import { CreateFlightComponent } from 'src/app/create-flight/create-flight.component';
+import { OrderDetailsComponent } from 'src/app/order-details/order-details.component';
 
 const routes: Routes = [
   {
@@ -41,7 +42,12 @@ const routes: Routes = [
   {
     path: 'create_flight',
     component: CreateFlightComponent
+  },
+  {
+    path: 'order_details/:id',
+    component: OrderDetailsComponent
   }
+
 ];
 
 @NgModule({
