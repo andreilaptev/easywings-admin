@@ -14,7 +14,7 @@ import { debug } from 'util';
 export class FlightdetailsComponent implements OnInit {
 
 flightId: number;
-flight$: object;
+flight$: any;
 
 updatedFlight : Flight = new Flight();
 receivedFlight: any;
@@ -54,7 +54,7 @@ deleted: boolean= false;
     // Edit Flight Function
     editFlight() {
 
-      console.log(this.flightId);
+      console.log(this.flight$);
       //debugger;
 
       if (this.updatedFlight.flightName == undefined)

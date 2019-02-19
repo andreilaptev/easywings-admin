@@ -38,13 +38,13 @@ export class DataService {
     const body = {
       
       ID: flightId,
-      flightName: flight.flightNumber, 
+      flightName: flight.flightName, 
       departureCity: flight.departureCity, 
       arrivalCity: flight.arrivalCity, 
-      departureTime: flight.departureDate, 
-      arrivalTime: flight.arrivalDate, 
+      departureTime: flight.departureTime, 
+      arrivalTime: flight.arrivalTime, 
       direct: flight.isDirect, 
-      ticketPrice: flight.price
+      ticketPrice: flight.ticketPrice
     };
 
     return this.http.put('http://laptevphamproject-prod.us-east-1.elasticbeanstalk.com/api/flights/' + flightId, body); 
