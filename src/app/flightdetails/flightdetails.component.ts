@@ -57,6 +57,29 @@ deleted: boolean= false;
       console.log(this.flightId);
       //debugger;
 
+      if (this.updatedFlight.flightName == undefined)
+        this.updatedFlight.flightName = this.flight$.flightName;
+
+      if (this.updatedFlight.departureCity == undefined)
+        this.updatedFlight.departureCity = this.flight$.departureCity;
+
+      if (this.updatedFlight.arrivalCity == undefined)
+        this.updatedFlight.arrivalCity = this.flight$.arrivalCity;
+
+      if (this.updatedFlight.departureTime == undefined)
+        this.updatedFlight.departureTime = this.flight$.departureTime;
+
+      if (this.updatedFlight.arrivalTime == undefined)
+        this.updatedFlight.arrivalTime = this.flight$.arrivalTime;
+      
+      if (this.updatedFlight.ticketPrice == undefined)
+        this.updatedFlight.ticketPrice = this.flight$.ticketPrice;
+
+    /*  
+      || newflight.departureCity== undefined || newflight.arrivalCity == undefined
+        || newflight.departureTime == undefined|| newflight.arrivalTime == undefined
+        || newflight.ticketPrice == undefined) {
+*/
       this.data.updateFlight(this.flightId, this.updatedFlight)
         .subscribe(
           data => this.flight$ = data          
