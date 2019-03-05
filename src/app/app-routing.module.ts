@@ -11,6 +11,7 @@ import { CreateFlightComponent } from 'src/app/create-flight/create-flight.compo
 import { OrderDetailsComponent } from 'src/app/order-details/order-details.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/', pathMatch: 'full' },
   {
     path: '',
     component: DashboardComponent

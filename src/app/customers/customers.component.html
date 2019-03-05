@@ -1,5 +1,6 @@
 <div class="container">
   <div class="flights_content" >
+        
       <div style="text-align: center">
      
     <div class="service"> 
@@ -8,7 +9,10 @@
        <a routerLink="/create_flight"><button> Create New Flight  </button></a>   
       
       </div>-->
-    
+      <div class="backToDashboard">
+      <a routerLink="/"><button class="backToDashboardButton"> Back to Dashboard </button></a> 
+    </div>
+
       <div class="searchField">
         <h5> Type to search for the customer</h5>
         <input type="text" name="search" [(ngModel)]="customerSearch">
