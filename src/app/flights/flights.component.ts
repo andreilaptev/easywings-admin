@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Observable } from 'rxjs';
 import { Data } from '@angular/router/src/config';
+import { DatePipe } from '@angular/common/src/pipes/date_pipe';
 
 @Component({
   selector: 'app-flights',

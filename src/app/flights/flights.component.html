@@ -20,7 +20,7 @@
 
     <ul>         
         <!--<li  *ngFor="let flight of filteredFlights"> -->
-            <li  *ngFor="let flight of flights$">  
+            <li  *ngFor="let flight of flights$ | search:  {departureCity : flightSearch}; index as i">  
             
             <div > 
                 <a routerLink="/flight_details/{{flight.id}}">                
