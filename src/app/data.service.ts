@@ -66,6 +66,8 @@ export class DataService {
     return this.http.get('http://laptevphamproject-prod.us-east-1.elasticbeanstalk.com/api/customers/'+ customerId)
   }
 
+  
+
   getAllOrders() {
     return this.http.get('http://laptevphamproject-prod.us-east-1.elasticbeanstalk.com/api/orders');
   }
