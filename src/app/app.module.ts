@@ -16,6 +16,7 @@ import { FlightdetailsComponent } from './flightdetails/flightdetails.component'
 import { CreateFlightComponent } from './create-flight/create-flight.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
 import { SearchPipe } from './search.pipe';
+import { CreateTicketComponent } from './create-ticket/create-ticket.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SearchPipe } from './search.pipe';
     FlightdetailsComponent,
     CreateFlightComponent,
     OrderDetailsComponent,
-    SearchPipe
+    SearchPipe,
+    CreateTicketComponent
   ],
   imports: [
     BrowserModule,

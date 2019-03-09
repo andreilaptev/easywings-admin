@@ -9,6 +9,7 @@ import { CustomersComponent } from 'src/app/customers/customers.component';
 import { FlightdetailsComponent } from 'src/app/flightdetails/flightdetails.component';
 import { CreateFlightComponent } from 'src/app/create-flight/create-flight.component';
 import { OrderDetailsComponent } from 'src/app/order-details/order-details.component';
+import { CreateTicketComponent } from 'src/app/create-ticket/create-ticket.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -47,6 +48,10 @@ const routes: Routes = [
   {
     path: 'order_details/:id',
     component: OrderDetailsComponent
+  },
+  {
+    path: 'create_ticket',
+    component: CreateTicketComponent
   }
 
 ];
