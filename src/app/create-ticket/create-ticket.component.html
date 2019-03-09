@@ -1,9 +1,54 @@
 
 <div class="container">
+    <h2> New Ticket Form</h2>
+  
+    <h3 *ngIf="warning"> All Fields Are Mandatory !! </h3>
+  
+    Ticket Type : 
+    <!--<input type="select" name="flightNumber" [(ngModel)]="ticket.ticketType">-->
+    <select name="type" aria-placeholder="Select..." [(ngModel)]="ticket.ticketType">
+        <option >Economy</option>
+        <option>Business</option>
+        <option>First Class</option>
 
-  <input />
-
-
-
-
-</div>
+    </select>
+  
+    <br>
+    Departure Date :
+    <input type="date" name="departureCityField" [(ngModel)]="ticket.departureTimeTo">
+    <br>
+  
+    Arrival Date :
+    <input type="date" name="arrivalCityField" [(ngModel)]="ticket.arrivalTimeTo">
+    <br>
+  
+    Return Departure Date :
+    <input type="date" name="departureDate" [(ngModel)]="ticket.departureTimeFrom">
+    <br>
+  
+    Return Arrival Date :
+    <input type="date" name="arrivalDate" [(ngModel)]="ticket.arrivalTimeFrom">
+    <br>
+  
+    Is Direct :
+    <input type="checkbox" name="isDirect" [(ngModel)]="ticket.isDirect">
+    <br>
+  
+    Price :
+    <input type="number" name="price" [(ngModel)]="ticket.price">
+    <br>
+  <br>
+  
+    <button (click)=addTicket(ticket)> Add Ticket </button>
+    <br>
+    
+    <a routerLink="/flights"><button> BACK </button></a>  
+  
+  </div>
+  
+  <div class="addedWindow" *ngIf="added">
+  
+    <h3> Ticket Added !</h3>
+    <a routerLink="/tickets"><button> OK </button></a>      
+  
+  </div>

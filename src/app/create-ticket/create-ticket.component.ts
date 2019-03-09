@@ -8,11 +8,19 @@ import {Ticket} from '../Ticket';
 })
 export class CreateTicketComponent implements OnInit {
 
-  ticket: Ticket;
+  ticket: Ticket = new Ticket();
+
+ 
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  addTicket(ticket) {
+
+    console.log(ticket)
+    debugger
   }
 
 }
