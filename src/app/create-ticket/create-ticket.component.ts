@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {Ticket} from '../Ticket';
+import { Ticket} from '../Ticket';
+import { DataService } from '../data.service';
+import { Observable } from 'rxjs';
+import { Data } from '@angular/router/src/config';
+import { HttpClient } from 'selenium-webdriver/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-ticket',
@@ -9,18 +14,23 @@ import {Ticket} from '../Ticket';
 export class CreateTicketComponent implements OnInit {
 
   ticket: Ticket = new Ticket();
+  added = false;
 
  
 
-  constructor() { }
+  constructor(private data: DataService, private router: Router) { }
 
   ngOnInit() {
   }
 
   addTicket(ticket) {
 
+    this.data.addTicket(ticket).subscribe(
+      data => this.ticket = data
+    )
+    this.added = true;
     console.log(ticket)
-    debugger
+    
   }
 
 }

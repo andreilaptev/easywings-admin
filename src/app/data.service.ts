@@ -90,6 +90,26 @@ export class DataService {
     return this.http.get('http://laptevphamproject-prod.us-east-1.elasticbeanstalk.com/api/favorites');
   }
 
+
+  addTicket(ticket){    
+
+    const body = {ticketType: ticket.ticketType, 
+                  price: ticket.price, 
+                  isRound: ticket.isRound, 
+                  departureTimeTo: ticket.departureTimeTo, 
+                  arrivalTimeTo: ticket.arrivalTimeTo, 
+                  departureTimeFrom: ticket.departureTimeFrom, 
+                  arrivalTimeFrom: ticket.arrivalTimeFrom,
+                  orderId: ticket.orderId
+                };
+       return this.http.post('http://laptevphamproject-prod.us-east-1.elasticbeanstalk.com/api/Tickets', body); 
+       
+
+  }
+
+
+  
+
   getFavorite(favoriteId) {
    // console.log(this.flight$)
     return this.http.get('http://laptevphamproject-prod.us-east-1.elasticbeanstalk.com/api/flifavoritesghts/'+ favoriteId)
