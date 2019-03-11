@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class CreateTicketComponent implements OnInit {
 
-  ticket: Ticket = new Ticket();
+  ticket: any;
   added = false;
 
  
