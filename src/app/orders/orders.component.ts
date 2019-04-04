@@ -14,7 +14,8 @@ export class OrdersComponent implements OnInit {
 
   orders$: any;
   order: any;
-
+  flightSearch: any;
+  
   ngOnInit() {
     this.data.getAllOrders().subscribe(
       data => {

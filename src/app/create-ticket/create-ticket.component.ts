@@ -15,7 +15,7 @@ export class CreateTicketComponent implements OnInit {
 
   ticket: any;
   added = false;
-
+  warning: boolean;
  
 
   constructor(private data: DataService, private router: Router) { }

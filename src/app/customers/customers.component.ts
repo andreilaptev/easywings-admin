@@ -12,6 +12,7 @@ export class CustomersComponent implements OnInit {
 
 customers$; any;
 customer: any;
+customerSearch: any;
 
   constructor(private data: DataService) { }
 

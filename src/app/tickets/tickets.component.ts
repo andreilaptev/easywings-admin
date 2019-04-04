@@ -12,6 +12,7 @@ export class TicketsComponent implements OnInit {
 
 tickets$: any;
 ticket: any;
+flightSearch: any;
 
   constructor(private data: DataService) { }
 
