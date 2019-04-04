@@ -13,7 +13,8 @@ export class FlightsComponent implements OnInit {
 
   flights$: any;
   flight: any;
-
+  flightSearch: any;
+  
   constructor(private data: DataService) { }
 
   ngOnInit() {
