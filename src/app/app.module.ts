@@ -17,6 +17,7 @@ import { CreateFlightComponent } from './create-flight/create-flight.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
 import { SearchPipe } from './search.pipe';
 import { CreateTicketComponent } from './create-ticket/create-ticket.component';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { CreateTicketComponent } from './create-ticket/create-ticket.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
