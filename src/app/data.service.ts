@@ -20,6 +20,7 @@ export class DataService {
 
   addFlight(flight){    
 
+
     const body = {flightName: flight.flightName, 
                   departureCity: flight.departureCity, 
                   arrivalCity: flight.arrivalCity, 
